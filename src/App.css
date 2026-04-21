@@ -1,0 +1,122 @@
+/* 🌿 Root Layout */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* 📱 Tablet */
+@media (min-width: 640px) {
+  #root {
+    padding: 1.5rem;
+  }
+}
+
+/* 💻 Desktop */
+@media (min-width: 1024px) {
+  #root {
+    padding: 2rem;
+  }
+}
+
+/* 🎯 Logo Responsive */
+.logo {
+  height: 4em;
+  padding: 1em;
+  transition: filter 300ms, transform 300ms;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .logo {
+    height: 5em;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .logo {
+    height: 6em;
+  }
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1.5em #8DAA3Faa);
+  transform: scale(1.05);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em #61dafbaa);
+}
+
+/* 🔄 Animation */
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.spin {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* 📦 Card System */
+.card {
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  margin: 1rem 0;
+}
+
+/* Responsive card spacing */
+@media (min-width: 640px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: 2rem;
+  }
+}
+
+/* 📝 Text */
+.read-the-docs {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* 📚 Grid Layout (important for your BookLoop) */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Mobile: 1 column */
+.grid {
+  grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3–4 columns */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
